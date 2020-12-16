@@ -2,17 +2,17 @@
 
 namespace App\Repository;
 
-use App\Entity\AisShiptype;
+use App\Entity\AisShipType;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @method AisShiptype|null find($id, $lockMode = null, $lockVersion = null)
- * @method AisShiptype|null findOneBy(array $criteria, array $orderBy = null)
- * @method AisShiptype[]    findAll()
- * @method AisShiptype[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method AisShipType|null find($id, $lockMode = null, $lockVersion = null)
+ * @method AisShipType|null findOneBy(array $criteria, array $orderBy = null)
+ * @method AisShipType[]    findAll()
+ * @method AisShipType[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class AisShiptypeRepository extends ServiceEntityRepository
+class AisShipTypeRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {

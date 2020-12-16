@@ -2,14 +2,14 @@
 
 namespace App\Entity;
 
-use App\Repository\AisShiptypeRepository;
+use App\Repository\AisShipTypeRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=AisShiptypeRepository::class)
  */
-class AisShiptype
+class AisShipType
 {
     /**
      * @ORM\Id
