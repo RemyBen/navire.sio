@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\AisShiptypeRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=AisShiptypeRepository::class)
@@ -24,10 +25,10 @@ class AisShiptype
 
     /**
      * @ORM\Column(type="integer")
-     * @Assrt\Length(min=1,
+     * @Assert\Length(min=1,
      *          max = 9,
-     *          minMessage = "Le type d'un navire est compris entre 1 et 9"
-     *          maxMessage = "Le type d'un navire est compris entre 1 et 9"
+     *          minMessage = "Le type d'un navire est compris entre 1 et 9",
+     *          maxMessage = "Le type d'un navire est compris entre 1 et 9",
      *          allowEmptyString = false
      *          )
      */
@@ -59,13 +60,6 @@ class AisShiptype
 
     public function setAisShipType(int $aisShipType): self
     {
-        try {
-            if ($this->aisShipType >= 1 && $this->aisShipType <= 9)
-            $this->aisShipType = $aisShipType;
-            return $this;
-            
-        } catch (Exception $ex) {
-            return $ex;
-        }
+        $this->aisShipType = $aisShipType;
     }
 }
